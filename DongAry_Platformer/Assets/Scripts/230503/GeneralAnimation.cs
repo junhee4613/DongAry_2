@@ -16,12 +16,15 @@ public class GeneralAnimation : StatSystem
         nowState = newState;
         Debug.Log(nowState);//상태 표시
         StartCoroutine(nowState.ToString());
+        
     }
 
     IEnumerator Idle()
     {
         while (true)
         {
+            an.SetBool("run", false);
+
             yield return null;
         }
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class StatSystem : MonoBehaviour
 {
     protected BasicStats Stats;
+    public Animator an;
 
     protected virtual void  StatSetting(int hp, int atk, float moveSpeed, float jumpForce)
     {
@@ -26,7 +27,7 @@ public class StatSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        an = GetComponent<Animator>();
     }
 
     // Update is called once per frame
